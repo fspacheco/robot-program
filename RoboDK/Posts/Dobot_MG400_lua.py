@@ -214,7 +214,7 @@ class RobotPost(object):
         :param conf_RLF: robot configuration as a list of 3 ints: [REAR, LOWER-ARM, FLIP]. [0,0,0] means [front, upper arm and non-flip] configuration
         :type conf_RLF: int list
         """
-        self.addline('MovJ({armOrientation="right", joint={' + pose_2_str(pose) + '}, tool=0, user=0 }, Default_Option)')
+        self.addline('MovJ({armOrientation="right", coordinate={' + pose_2_str(pose) + '}, joint={'+joints_2_str(joints)+'}, tool=0, user=0 }, Default_Option)')
 
     def MoveL(self, pose, joints, conf_RLF=None):
         """Defines a linear movement.

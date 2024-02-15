@@ -3,6 +3,8 @@
 #
 # Fernando S. Pacheco
 # Based on https://github.com/ros-industrial/industrial_training/blob/humble/gh_pages/_downloads/ros-industrial-training-setup.sh
+# and ROS2 for beginners at
+# https://learning.oreilly.com/videos/ros2-for-beginners/10000DIVC2022146/
 #
 # 2024
 

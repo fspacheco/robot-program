@@ -36,13 +36,16 @@ sudo apt install -y ros-humble-desktop \
 sudo rosdep init
 rosdep update
 
-# add lines to source needed .sh scripts in .bashrc
+# add lines to source the needed .sh scripts in .bashrc
 echo "" >> .bashrc
 echo "#Setup for ROS2" >> .bashrc
 echo "source /opt/ros/humble/setup.bash" >> .bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> .bashrc
 # and now source the file
 source .bashrc
+
+# For Gnome, show minimize button in windows
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
 # Need to downgrade setuptools (python pip) 
 # https://learning.oreilly.com/videos/ros2-for-beginners/10000DIVC2022146/10000DIVC2022146-ccccc4/

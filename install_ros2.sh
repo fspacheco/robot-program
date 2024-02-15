@@ -22,7 +22,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update -y
 
 # ROS2 install
-sudo apt install ros-humble-desktop \
+sudo apt install -y ros-humble-desktop \
     ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-xacro ros-humble-joint-state-publisher-gui \
     python3-colcon-common-extensions python3-argcomplete \
     ros-humble-pcl-ros pcl-tools \
@@ -49,5 +49,6 @@ pip3 install setuptools==58.2.0
 # Directories for ROS workspace
 # Structure from https://learning.oreilly.com/videos/ros2-for-beginners/10000DIVC2022146/10000DIVC2022146-ccccc2/
 mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
 colcon build
 source ~/ros2_ws/install/setup.bash

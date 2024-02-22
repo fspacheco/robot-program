@@ -56,7 +56,7 @@ def pose_2_str(pose):
     :rtype: str
     """
     [x, y, z, r, p, w] = pose_2_xyzrpw(pose)
-    return ('%.3f,%.3f,%.3f,%.3f' % (x, y, z, r))
+    return ('%.3f,%.3f,%.3f,%.3f' % (x, y, z, w))
 
 
 def joints_2_str(joints):

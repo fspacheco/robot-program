@@ -406,13 +406,14 @@ class RobotPost(object):
             io_var = 'DI[%s]' % str(io_var)
         if type(io_value) != str:  # set default variable value if io_value is a number
             if io_value > 0:
-                io_value = 'TRUE'
+                io_value = 'ON'
             else:
-                io_value = 'FALSE'
+                io_value = 'OFF'
 
         # at this point, io_var and io_value must be string values
         if timeout_ms < 0:
-            self.addline('WAIT FOR %s==%s' % (io_var, io_value))
+            self.addline('Sync()')
+            self.addline('repeat until (%s==%s)' % (io_var, io_value))
         else:
             self.addline('WAIT FOR %s==%s TIMEOUT=%.1f' % (io_var, io_value, timeout_ms))
 
@@ -513,4 +514,3 @@ def test_post():
 if __name__ == "__main__":
     """Procedure to call when the module is executed by itself: test_post()"""
     test_post()
-

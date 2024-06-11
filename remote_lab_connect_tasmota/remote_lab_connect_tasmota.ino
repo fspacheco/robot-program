@@ -19,20 +19,35 @@
  */
 
 #include <WiFiS3.h>
-#include "arduino_secrets.h" 
+#include "arduino_secrets.h"
+/* arduino_secrets.h with the definitions:
+#define SECRET_SSID ""
+#define SECRET_PASS ""
+*/ 
 
 char ssid[] = SECRET_SSID;    // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 int status = WL_IDLE_STATUS;  // the WiFi radio's status
 
-// server address:
-IPAddress server(172,28,171,55);
+// server addresses
+IPAddress deviceA(172,28,171,56);
+IPAddress deviceB(172,28,171,57);
+
+// digital input pins
+int pinA = 6;
+int pinB = 7;
+
+// to store the digital input signals
+int signalA = 0;
+int signalB = 0;
+int oldSignalA = 0;
+int oldSignalB = 0;
 
 // Initialize the WiFi client library
 WiFiClient client;
 
 unsigned long lastConnectionTime = 0;            // last time you connected to the server, in milliseconds
-const unsigned long postingInterval = 10L * 1000L; // delay between updates, in milliseconds
+const unsigned long postingInterval = 200L; // delay between updates, in milliseconds
 
 void setup() {
   //Initialize serial and wait for port to open:
@@ -40,7 +55,7 @@ void setup() {
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-
+  Serial.println("Initializing...");
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
@@ -63,64 +78,11 @@ void setup() {
     delay(10000);
   }
   printWifiStatus();
+
+  // initialize the digital inputs
+  pinMode(pinA, INPUT);
+  pinMode(pinB, INPUT);
 }
-
-/*void loop() {
-  // check the network connection once every 10 seconds:
-  delay(10000);
-  printCurrentNet();
-}
-
-void printWifiData() {
-  // print your board's IP address:
-  IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
-  
-  Serial.println(ip);
-
-  // print your MAC address:
-  byte mac[6];
-  WiFi.macAddress(mac);
-  Serial.print("MAC address: ");
-  printMacAddress(mac);
-}
-
-void printCurrentNet() {
-  // print the SSID of the network you're attached to:
-  Serial.print("SSID: ");
-  Serial.println(WiFi.SSID());
-
-  // print the MAC address of the router you're attached to:
-  byte bssid[6];
-  WiFi.BSSID(bssid);
-  Serial.print("BSSID: ");
-  printMacAddress(bssid);
-
-  // print the received signal strength:
-  long rssi = WiFi.RSSI();
-  Serial.print("signal strength (RSSI):");
-  Serial.println(rssi);
-
-  // print the encryption type:
-  byte encryption = WiFi.encryptionType();
-  Serial.print("Encryption Type:");
-  Serial.println(encryption, HEX);
-  Serial.println();
-}
-
-void printMacAddress(byte mac[]) {
-  for (int i = 0; i < 6; i++) {
-    if (i > 0) {
-      Serial.print(":");
-    }
-    if (mac[i] < 16) {
-      Serial.print("0");
-    }
-    Serial.print(mac[i], HEX);
-  }
-  Serial.println();
-}
-*/
 
 /* just wrap the received data up to 80 columns in the serial print*/
 /* -------------------------------------------------------------------------- */
@@ -136,9 +98,7 @@ void read_request() {
     /* wrap data to 80 columns*/
     received_data_num++;
     if(received_data_num % 80 == 0) { 
-      
     }
-    
   }  
 }
 
@@ -150,38 +110,58 @@ void loop() {
   // purposes only:
   read_request();
   
-  // if ten seconds have passed since your last connection,
-  // then connect again and send data:
+  // if some time has passed since last check
   if (millis() - lastConnectionTime > postingInterval) {
-    httpRequest();
+    signalA = digitalRead(pinA);
+    if (signalA != oldSignalA) {
+      // update
+      Serial.println("Time to update A");
+      httpRequest(deviceA, signalA);
+      oldSignalA = signalA;
+    }
+
+    signalB = digitalRead(pinB);
+    if (signalB != oldSignalB) {
+      // update
+      Serial.println("Time to update B");
+      httpRequest(deviceB, signalB);
+      oldSignalB = signalB;
+    }
+    // note the time that the checking was made:
+    lastConnectionTime = millis();
   }
 
 }
 
 // this method makes a HTTP connection to the server:
 /* -------------------------------------------------------------------------- */
-void httpRequest() {
+void httpRequest(IPAddress device, int signal) {
 /* -------------------------------------------------------------------------- */  
   // close any connection before send a new request.
   // This will free the socket on the NINA module
   client.stop();
 
   // if there's a successful connection:
-  if (client.connect(server, 80)) {
+  if (client.connect(device, 80)) {
     Serial.println("connecting...");
     // send the HTTP GET request:
     // Create the URL for the request
-    String url = "/cm?cmnd=Power%20Toggle";
+    String urlCommand="/cm?cmnd=Power%20";
+    if (signal==0) {
+      urlCommand = urlCommand + "Off";
+    }
+    if (signal==1) {
+      urlCommand = urlCommand + "On";
+    }
 
     Serial.print("Requesting URL: ");
-    Serial.println(url);
+    Serial.println(device);
+    Serial.println(urlCommand);
 
     // This will send the request to the server
-    client.print(String("GET ") + url + " HTTP/1.1\r\n" +
-               "Host: " + server + "\r\n" +
+    client.print(String("GET ") + urlCommand + " HTTP/1.1\r\n" +
+               "Host: " + device + "\r\n" +
                "Connection: close\r\n\r\n");    
-    // note the time that the connection was made:
-    lastConnectionTime = millis();
   } else {
     // if you couldn't make a connection:
     Serial.println("connection failed");

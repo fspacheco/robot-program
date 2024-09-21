@@ -12,7 +12,7 @@ Read the safety information, pages 1 to 6.
 
 # Connections
 
-Take one table with the robotic arm.
+Take the table assigned to your team.
 Lock the table.
 ![](img/using-dobot-mg400/lock-table.jpg)
 
@@ -28,7 +28,7 @@ Connect the network (lan) cable to LAN1 in the robot
 Connect the other end of the network cable to the switch bar port PC ETH.
 ![](img/using-dobot-mg400/lan-connection-switchbar.jpg)
 
-Turn on the robot. The status LED should be blinking white, that is, it's starting the system.
+Turn on the robot. The status LED should be blinking white. It means the system is starting.
 ![](img/using-dobot-mg400/led-status-loading.jpg)
 
 According to the manual, pages 8 and 9, the LED status shows the following information
@@ -60,7 +60,7 @@ Now, you need to change the IP assignment from automatic to manual (fixed).
 
 ![](img/using-dobot-mg400/ip-settings-window.svg)
 
-Then, you change the IP address abd subnet mask for IPv4.
+Then, you change the IP address and subnet mask for IPv4.
 
 ![](img/using-dobot-mg400/ip-subnet-settings.svg)
 
@@ -81,13 +81,19 @@ When the robot is connected through Dobot Studio, the status LED should change t
 
 ![](img/using-dobot-mg400/led-status-started-not-enabled.jpg)
 
-There is another step after stablishing the connection: you should enable the robot to use. You do it in the icon of the robotic arm. The icon should turn to green, as well as the status LED, and you start hearing some humming from the motors. 
+There is another step after stablishing the connection: you should enable the robot to use. You do it in the icon of the robotic arm in the top blue bar.
+
+You are requested to set load parameters. For the moment, since no tool is connected to the tool flange, you can leave all parameters as zero.
+
+![](img/using-dobot-mg400/set-load-params.png)
+
+The icon should turn to green, as well as the status LED, and you start hearing some humming from the motors. 
 
 ![](img/using-dobot-mg400/mg400-connected-enabled.svg)
 
 ## Emergency button
 
-Before starting to use the robot, let's make sure you know how to stop it in case of a problem. Locate it.
+Before starting to use the robot, let's make sure you know how to stop it in case of a problem. Locate the emergency stop button.
 
 ![](img/using-dobot-mg400/emergency-button.jpg)
 

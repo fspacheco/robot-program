@@ -183,3 +183,6 @@ If you need to repeat the same sequence, instead of copying all the commands, yo
 
 ![](img/using-dobot-mg400/program-repeat.png)
 
+For simple programs, the drag-and-drop blocks are easy to use, but for more complex tasks with functions and subroutines, in my opinion the space becomes difficult to read. Blocks are not searchable and not indexed, as usual in text-based integrated development environments (IDE). 
+
+Besides that, in the particular case of Dobot Studio, you can only program while connected to the robot. This is a tremendous disadvantage, not only in the University. Imagine the robot is on operation in a production line and you need to test a new setup: you need to stop the production, connect the robot to your computer and only then start programming and testing. This is not practical. For this reason, we use RoboDK, that provides a simulation environment.

@@ -167,10 +167,10 @@ After this, create two more poses, P1 and P2. The user interface is not very fri
 
 ![](img/using-dobot-mg400/three-points.png)
 
-Create a program using linear move to P1 and to P2. If you try to run it, you receive and error message?
+Create a program using linear move to P1 and to P2. Try to run it. Do you receive and error message?
 
 ![](img/using-dobot-mg400/move-three-points-with-problem.png)
 
-Check that if you change the last movement to MovJ, then the program works. Why? What was the issue with the previous program?
+Check that if you change the last movement to MovJ, then the program works. Why? What was the issue with the previous program that is solved now?
 
 ![](img/using-dobot-mg400/move-three-points-ok.png)

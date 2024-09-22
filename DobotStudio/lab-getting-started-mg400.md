@@ -174,3 +174,12 @@ Create a program using linear move to P1 and to P2. Try to run it. Do you receiv
 Check that if you change the last movement to MovJ, then the program works. Why? What was the issue with the previous program that is solved now?
 
 ![](img/using-dobot-mg400/move-three-points-ok.png)
+
+You can add a pause between the movements with the block _move wait_. Try it.
+
+![](img/using-dobot-mg400/program-wait.png)
+
+If you need to repeat the same sequence, instead of copying all the commands, you can use a _repeat_ block. Try it.
+
+![](img/using-dobot-mg400/program-repeat.png)
+

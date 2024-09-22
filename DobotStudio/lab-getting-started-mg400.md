@@ -186,3 +186,33 @@ If you need to repeat the same sequence, instead of copying all the commands, yo
 For simple programs, the drag-and-drop blocks are easy to use, but for more complex tasks with functions and subroutines, in my opinion the space becomes difficult to read. Blocks are not searchable and not indexed, as usual in text-based integrated development environments (IDE). 
 
 Besides that, in the particular case of Dobot Studio, you can only program while connected to the robot. This is a tremendous disadvantage, not only in the University. Imagine the robot is on operation in a production line and you need to test a new setup: you need to stop the production, connect the robot to your computer and only then start programming and testing. This is not practical. For this reason, we use RoboDK, that provides a simulation environment.
+
+# RoboDK and MG400
+
+We started using RoboDK in the previous class. Create the same program with the three poses (InitialPose, P1, P2) in RoboDK. Use the station [HAMK Robotics station MG400 without tool.rdk](https://github.com/fspacheco/robot-program/raw/refs/heads/main/RoboDK/HAMK_Robotics_station_MG400_without_tool.rdk)
+
+After testing your program in RoboDK, you need to export to a format that Dobot Studio is able to read. For this, a **post-processor** is executed. It works like a translator from the internal representation of RoboDK to a language specific to a robot model. In the case of Dobot MG400, the language is called Lua. To make the conversion, first download an updated version of the post processor, named [Dobot MG 400 lua](https://github.com/fspacheco/robot-program/raw/refs/heads/main/RoboDK/Posts/Dobot_MG400_lua.py). Then, copy the file to the folder Posts where RoboDK is installed. In Windows, the default location is ```C:\RoboDK\Posts\```.
+
+![](img/using-dobot-mg400/windows-c-robodk-posts.png)
+
+In RoboDK, select a post-processor clicking with the mouse right button on your program.
+
+![](img/using-dobot-mg400/select-post-processor-robodk.png)
+
+Choose _Dobot MG 400 lua_.
+
+![](img/using-dobot-mg400/select-dobot-mg400-lua.png)
+
+Again with mouse right button on your program, now select _generate robot program_.
+
+![](img/using-dobot-mg400/robodk-generate-program.png)
+
+Your "translated" program to Lua will appear in a text editor window.
+
+![](img/using-dobot-mg400/generated-lua-program.png)
+
+To run this program in the robot, you need to return to Dobot Studio. Then choose _Script_ from the main menu, instead of DobotBlocky.
+
+![](img/using-dobot-mg400/dobot-studio-script-window.png)
+
+In the new window, paste your program, save and run with the blue button _Start_.

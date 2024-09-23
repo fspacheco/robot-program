@@ -151,7 +151,7 @@ The screen shows in the left the available programming blocks and in the center 
 
 ![](img/using-dobot-mg400/dobot-studio-start-block.png)
 
-After the start block, add a joint movement (movJ) to InitialPose. Do you remember the three types of movement discussed in the lecture?
+After the start block, add a joint movement (movJ) to InitialPose. Do you remember the three types of movement discussed in the lecture? (add this answer to your notebook :notebook:)
 
 ![](img/using-dobot-mg400/movJ-program.png)
 
@@ -171,7 +171,7 @@ Create a program using linear move to P1 and to P2. Try to run it. Do you receiv
 
 ![](img/using-dobot-mg400/move-three-points-with-problem.png)
 
-Check that if you change the last movement to MovJ, then the program works. Why? What was the issue with the previous program that is solved now?
+Check that if you change the last movement to MovJ, then the program works. Why? What was the issue with the previous program that is solved now? (add this answer to your notebook :notebook:)
 
 ![](img/using-dobot-mg400/move-three-points-ok.png)
 
@@ -216,3 +216,9 @@ To run this program in the robot, you need to return to Dobot Studio. Then choos
 ![](img/using-dobot-mg400/dobot-studio-script-window.png)
 
 In the new window, paste your program, save and run with the blue button _Start_.
+
+# Document your work
+
+Today, you do not need to do a full report, but simply:
+- answer the questions indicated with the sentence (add this answer to your notebook :notebook:)
+- comment about any problem or issue you encountered

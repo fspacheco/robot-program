@@ -221,4 +221,4 @@ In the new window, paste your program, save and run with the blue button _Start_
 
 Today, you do not need to do a full report, but simply:
 - answer the questions indicated with the sentence "add this answer to your notebook :notebook:"
-- comment about any problem, issue you encountered. Also share your achievements!
+- comment about any problem or issue you encountered. Also share your achievements!

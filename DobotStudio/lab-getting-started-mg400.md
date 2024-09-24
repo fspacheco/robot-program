@@ -171,7 +171,7 @@ After this, create two more poses, P1 and P2. The user interface is not very fri
 
 ![](img/using-dobot-mg400/three-points.png)
 
-Create a program using linear move to P1 and to P2. Try to run it. Do you receive and error message?
+Create a program using linear move to P1 and to P2. Try to run it. Do you receive an error message?
 
 ![](img/using-dobot-mg400/move-three-points-with-problem.png)
 

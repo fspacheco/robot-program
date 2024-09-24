@@ -23,6 +23,10 @@ Lock the table.
 Connect the power
 ![](img/using-dobot-mg400/power-connection.jpg)
 
+:warning: **Important**: make sure the power cable is firmly connected to the power supply.
+
+![](img/using-dobot-mg400/power-cable-connection.svg)
+
 Connect the emergency button
 ![](img/using-dobot-mg400/emergency-connection.jpg)
 

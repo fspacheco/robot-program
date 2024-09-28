@@ -1,4 +1,6 @@
-# Basic safety rules
+# Motion with Dobot MG400
+
+## Basic safety rules
 
 The robots we will start using in the lab present low risk of injuries if you follow the basic rules:
 
@@ -10,11 +12,11 @@ In the support page of Dobot
 https://www.dobot-robots.com/service/download-center, download the **Dobot MG400 User Guide**.
 Read the safety information, pages 1 to 6.
 
-# The robotic arm Dobot MG400
+## The robotic arm Dobot MG400
 
 Check in the user guide the general information about the robot (page 8) and answer the [activity in Learn](https://learn.hamk.fi/mod/hvp/view.php?id=802839).
 
-# Connections
+## Connections
 
 Take the robot assigned to your team and position in front of the computer table.
 Lock the table.
@@ -51,7 +53,7 @@ According to the manual, pages 8 and 9, the LED status shows the following infor
 | :red_circle: Red | Steady on | General alarm
 | :red_circle:| Flash | Position limit alarm
 
-# Network setup
+## Network setup
 
 Dobot MG400 has a fixed IP address, and to connect to the robot, we need to modify the computer network settings. The following steps consider you are using the Windows machines in the network lab.
 
@@ -75,7 +77,7 @@ Then, you change the IP address and subnet mask for IPv4.
 After saving, confirm you have the following settings.
 ![](img/using-dobot-mg400/checking-network-setup.svg)
 
-# Dobot Studio
+## Dobot Studio
 
 From https://www.dobot-robots.com/service/download-center, download **DobotStudio Pro 2.8 for Win64** and install it.
 
@@ -91,6 +93,8 @@ When the robot is connected through Dobot Studio, the status LED should change t
 
 There is another step after stablishing the connection: you should enable the robot to use. You do it in the icon of the robotic arm in the top blue bar.
 
+![](img/using-dobot-mg400/button-to-enable-robot.jpg)
+
 You are requested to set load parameters. For the moment, since no tool is connected to the tool flange, you can leave all parameters as zero.
 
 ![](img/using-dobot-mg400/set-load-params.png)
@@ -99,7 +103,7 @@ The icon should turn to green, as well as the status LED, and you start hearing 
 
 ![](img/using-dobot-mg400/mg400-connected-enabled.svg)
 
-## Emergency button
+### Emergency button
 
 Before starting to use the robot, let's make sure you know how to stop it in case of a problem. Locate the emergency stop button.
 
@@ -125,7 +129,7 @@ Finally, press **Clear Alarm** in the Alarm window in Dobot Studio.
 
 Practice this emergency operation three times. Make sure all the team members know how to use the emergency.
 
-## Control Panel
+### Control Panel
 
 In the left side of Dobot Studio window, you find a control panel, with a virtual copy of the robot showing its current position and two jog wheels. In the first, you can move the robot using **cartesian coordinates**. In the second, you control directly the **joints**. 
 
@@ -145,7 +149,7 @@ Another way to move the robot is through **hand guidance**, that is, you move di
 
 Try to move the arm to different positions. If you get an alarm, simply move the arm back to a place within the workspace. After that, deactive the hand guidance.
 
-## Programming with DobotBlocky
+### Programming with DobotBlocky
 
 There are two option to program the arm inside DobotStudio: one using  drag-and-drop blocks and other using scripts. Let's start with the visual programming editor using blocks.
 
@@ -191,7 +195,7 @@ For simple programs, the drag-and-drop blocks are easy to use, but for more comp
 
 Besides that, in the particular case of Dobot Studio, you can only program while connected to the robot. This is a tremendous disadvantage, not only in the University. Imagine the robot is on operation in a production line and you need to test a new setup: you need to stop the production, connect the robot to your computer and only then start programming and testing. This is not practical. For this reason, we use RoboDK, that provides a simulation environment.
 
-# RoboDK and MG400
+## RoboDK and MG400
 
 We started using RoboDK in the previous class. Create the same program with the three poses (InitialPose, P1, P2) in RoboDK. Use the station [HAMK Robotics station MG400 without tool.rdk](https://github.com/fspacheco/robot-program/raw/refs/heads/main/RoboDK/HAMK_Robotics_station_MG400_without_tool.rdk)
 
@@ -221,8 +225,12 @@ To run this program in the robot, you need to return to Dobot Studio. Then choos
 
 In the new window, paste your program, save and run with the blue button _Start_.
 
-# Document your work
+## Document your work
 
 Today, simply add an entry in your engineering notebook with:
 - answers to the questions indicated with the sentence "add this answer to your notebook :notebook:"
 - comment about any problem or issue you encountered. Also share your achievements!
+
+## Turn off
+
+Remember to disable the robot, power off, then disconnect the power and network cables.

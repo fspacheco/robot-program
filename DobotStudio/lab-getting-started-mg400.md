@@ -163,7 +163,7 @@ After the start block, add a joint movement (movJ) to InitialPose. Do you rememb
 
 ![](img/using-dobot-mg400/movJ-program.png)
 
-But what is this _InitialPose_? It is defined in the tab Points, that you can access through the icon in the right side of the application.
+But what is this _InitialPose_? It is defined in the tab _Points_, that you can access through the icon in the right side of the application.
 
 ![](img/using-dobot-mg400/points-window.png)
 

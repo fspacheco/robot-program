@@ -126,6 +126,8 @@ Add the results to your notebook :notebook:.
 
 You can also try with the wood planks.
 
+If time is available, check the [lab about circuits and measurements](https://github.com/fspacheco/robot-program/blob/main/DobotStudio/lab-electrical-measurements.md)
+
 ## Document your work
 
 Today, simply add an entry in your engineering notebook with:

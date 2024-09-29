@@ -81,6 +81,49 @@ In my tests, the Z coordinate was -157.4 mm.
 
 ![](img/dobot-mg400-tools/error-movement-out-workspace.jpg)
 
+## Programmming with RoboDK
+
+There is a [station in RoboDK with the vacuum gripper](https://github.com/fspacheco/robot-program/blob/main/RoboDK/box/suction-cup/HAMK_Vacuum_gripper_MG400.rdk) and an adjusted reference frame.
+
+The station has a mosaic title to pick and a box to place the title. The target _Pick 1_ has Z coordinate -157 mm. You should adjust to the value you found in your tests.
+
+![](img/dobot-mg400-tools/pick-coordinates-robodk.png)
+
+Then create more targets:
+- _Approach 1_, 30 mm higher than _Pick 1_
+- _Place in box_, located in the middle of the orange box
+- _Approach box_, 30 mm higher than _Place in box_
+
+To control the vacuum, you use the IO command. IO name refers to the digital output, and IO value, to the status, on (1) or off (0).
+
+![](img/dobot-mg400-tools/IO-command-robodk.png)
+
+When you turn on the vacuum, you need to wait some time before moving, to make sure the object is firmly attached to the cup. You need to experiment how long is enough. The same is valid when you turn off the vacuum, otherwise the object is not completely released.
+
+The targets to approach the object and the box are needed to avoid the arm scratching the surface or hitting the box. Then, your program is like:
+
+- move to _Approach 1_
+- move to _Pick 1_
+- turn on the vacuum
+- wait for vacuum being formed
+- move to _Approach 1_
+- move to _Approach box_
+- move to _Place in box_
+- turn off the vacuum
+- wait for vacuum being released
+- move to _Approach box_
+
+Think about what type of movement is needed in each step: linear or joint?
+Answer it, take a screenshot of your program and add to your notebook :notebook:
+
+Set the post-processor to _Dobot MG400 lua_, generate the program for the MG400 and run it using Dobot Studio. Check the [instructions for the getting started lab](https://github.com/fspacheco/robot-program/blob/main/DobotStudio/lab-getting-started-mg400.md#robodk-and-mg400).
+
+## Document your work
+
+Today, simply add an entry in your engineering notebook with:
+- answers to the questions indicated with the sentence "add to your notebook :notebook:"
+- comment about any problem or issue you encountered. Also share your achievements!
+
 ## Turn off
 
 Remember to disable the robot, power off, then disconnect the power and network cables.

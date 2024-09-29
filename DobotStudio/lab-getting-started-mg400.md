@@ -197,9 +197,9 @@ Besides that, in the particular case of Dobot Studio, you can only program while
 
 ## RoboDK and MG400
 
-We started using RoboDK in the previous class. Create the same program with the three poses (InitialPose, P1, P2) in RoboDK. Use the station [HAMK Robotics station MG400 without tool.rdk](https://github.com/fspacheco/robot-program/raw/refs/heads/main/RoboDK/HAMK_Robotics_station_MG400_without_tool.rdk)
+We started using RoboDK in the previous class. Create the same program with the three poses (InitialPose, P1, P2) in RoboDK. Use the station [HAMK Robotics station MG400 without tool.rdk](https://github.com/fspacheco/robot-program/blob/main/RoboDK/HAMK_Robotics_station_MG400_without_tool.rdk)
 
-After testing your program in RoboDK, you need to export to a format that Dobot Studio is able to read. For this, a **post-processor** is executed. It works like a translator from the internal representation of RoboDK to a language specific to a robot model. In the case of Dobot MG400, the language is called Lua. To make the conversion, first download an updated version of the post processor, named [Dobot MG 400 lua](https://github.com/fspacheco/robot-program/raw/refs/heads/main/RoboDK/Posts/Dobot_MG400_lua.py). Then, copy the file to the folder Posts where RoboDK is installed. In Windows, the default location is ```C:\RoboDK\Posts\```.
+After testing your program in RoboDK, you need to export to a format that Dobot Studio is able to read. For this, a **post-processor** is executed. It works like a translator from the internal representation of RoboDK to a language specific to a robot model. In the case of Dobot MG400, the language is called Lua. To make the conversion, first download an updated version of the post processor, named [Dobot MG 400 lua](https://github.com/fspacheco/robot-program/blob/main/RoboDK/Posts/Dobot_MG400_lua.py). Then, copy the file to the folder Posts where RoboDK is installed. In Windows, the default location is ```C:\RoboDK\Posts\```.
 
 ![](img/using-dobot-mg400/windows-c-robodk-posts.png)
 

@@ -62,20 +62,20 @@ For testing, you can use the I/O panel in Dobot Studio. Try it.
 
 ![](img/dobot-mg400-tools/IO-panel.svg)
 
-## Checking the height to pick a mosaic title
+## Checking the height to pick a mosaic tile
 
-In this lab, you start picking and placing mosaic titles with dimensions 24 x 24 x 4mm. The vacuum cup is expected to touch the top of the table with Z coordinate -161.5 mm (it depends of how deep the gripper was attached to the tool shaft). Then, to touch the top of the mosaic title, the coordinate should be -161.5 + 4mm = -157.5 mm. Since there is this variation in the attachment of the gripper to the tool shaft, you need to test what is the correct height for your setup:
+In this lab, you start picking and placing mosaic tiles with dimensions 24 x 24 x 4mm. The vacuum cup is expected to touch the top of the table with Z coordinate -161.5 mm (it depends of how deep the gripper was attached to the tool shaft). Then, to touch the top of the mosaic tile, the coordinate should be -161.5 + 4mm = -157.5 mm. Since there is this variation in the attachment of the gripper to the tool shaft, you need to test what is the correct height for your setup:
 
 1. Create a pose ```(350, 0, -157, 0)``` in Dobot Studio.
 2. Move to this pose.
-3. Position a mosaic title exactly below the vacuum cup.
+3. Position a mosaic tile exactly below the vacuum cup.
 4. Turn on the vacuum (digital output 1).
-5. If the cup does not grab the title, turn off the vacuum.
-6. Move the arm 0.1 mm down. Use the step mode in the control panel. Then repeat steps 4 to 6 until the cup grabs the mosaic title.
+5. If the cup does not grab the tile, turn off the vacuum.
+6. Move the arm 0.1 mm down. Use the step mode in the control panel. Then repeat steps 4 to 6 until the cup grabs the mosaic tile.
 
 ![](img/dobot-mg400-tools/step-mode.svg)
 
-In my tests, the Z coordinate was -157.4 mm.
+Add this value to your notebook :notebook:. In my tests, the Z coordinate was -157.4 mm.
 
 :warning: If you move too fast to a coordinate outside the workspace, you will get an error. So, do it carefully.
 
@@ -85,7 +85,7 @@ In my tests, the Z coordinate was -157.4 mm.
 
 There is a [station in RoboDK with the vacuum gripper](https://github.com/fspacheco/robot-program/blob/main/RoboDK/box/suction-cup/HAMK_Vacuum_gripper_MG400.rdk) and an adjusted reference frame.
 
-The station has a mosaic title to pick and a box to place the title. The target _Pick 1_ has Z coordinate -157 mm. You should adjust to the value you found in your tests.
+The station has a mosaic tile to pick and a box to place the tile into. The target _Pick 1_ has Z coordinate -157 mm. You should adjust to the value you found in your tests.
 
 ![](img/dobot-mg400-tools/pick-coordinates-robodk.png)
 
@@ -114,14 +114,22 @@ The targets to approach the object and the box are needed to avoid the arm scrat
 - move to _Approach box_
 
 Think about what type of movement is needed in each step: linear or joint?
-Answer it, take a screenshot of your program and add to your notebook :notebook:
+Answer it, take a screenshot of your program and add to your notebook :notebook:.
 
 Set the post-processor to _Dobot MG400 lua_, generate the program for the MG400 and run it using Dobot Studio. Check the [instructions for the getting started lab](https://github.com/fspacheco/robot-program/blob/main/DobotStudio/lab-getting-started-mg400.md#robodk-and-mg400).
+
+After you complete successfully the pick and place task for one tile, add more. Do it gradually.
+
+![](img/dobot-mg400-tools/mosaic-tiles-and-box.jpg)
+
+Add the results to your notebook :notebook:.
+
+You can also try with the wood planks.
 
 ## Document your work
 
 Today, simply add an entry in your engineering notebook with:
-- answers to the questions indicated with the sentence "add to your notebook :notebook:"
+- answers to the questions indicated with the notebook icon :notebook:
 - comment about any problem or issue you encountered. Also share your achievements!
 
 ## Turn off

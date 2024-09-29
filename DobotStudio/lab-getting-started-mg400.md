@@ -137,6 +137,10 @@ In the left side of Dobot Studio window, you find a control panel, with a virtua
 
 Start with the joints. Press J1+ and then J1- until the robot reaches the limits of the workspace. What are these limits? Check Section 5.4 (Workspace) in the MG400 user guide.
 
+:exclamation: **Important**: there is an error in the manual. The y-axis increases to the left.
+
+![](img/using-dobot-mg400/workspace-mg400-correct-axis.svg)
+
 When you reach any joint limit, an error message is presented as shown in the following image. To return to normal operation, simply use the control panel to move the joint back to a position within the workspace.
 
 ![](img/using-dobot-mg400/error-joint-exceeds.png)

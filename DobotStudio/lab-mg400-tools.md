@@ -81,6 +81,10 @@ Add this value to your notebook :notebook:. In my tests, the Z coordinate was -1
 
 ![](img/dobot-mg400-tools/error-movement-out-workspace.jpg)
 
+## Programming with Dobot Studio
+
+You can try to program using the blocks in Dobot Studio. You need to create more points to approach the tile and the box. Use hand guiding for easier positioning. Then, think about the sequence of commands you need to use. Besides the movements (joint and linear), you should use the block to set one digital output and the block to wait. 
+
 ## Programmming with RoboDK
 
 There is a [station in RoboDK with the vacuum gripper](https://github.com/fspacheco/robot-program/blob/main/RoboDK/box/suction-cup/HAMK_Vacuum_gripper_MG400.rdk) and an adjusted reference frame.

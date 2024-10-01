@@ -98,7 +98,7 @@ Then create more targets:
 - _Place in box_, located in the middle of the orange box
 - _Approach box_, positioned 30 mm higher than _Place in box_
 
-To control the vacuum, you use the IO command. IO name refers to the digital output, and IO value, to the status, on (1) or off (0).
+To control the vacuum, you use the IO command. ```IO name``` refers to the digital output, and ```IO value```, to the status: on (1) or off (0).
 
 ![](img/dobot-mg400-tools/IO-command-robodk.png)
 

@@ -94,9 +94,9 @@ The station has a mosaic tile to pick and a box to place the tile into. The targ
 ![](img/dobot-mg400-tools/pick-coordinates-robodk.png)
 
 Then create more targets:
-- _Approach 1_, 30 mm higher than _Pick 1_
+- _Approach 1_, that is 30 mm higher than _Pick 1_
 - _Place in box_, located in the middle of the orange box
-- _Approach box_, 30 mm higher than _Place in box_
+- _Approach box_, positioned 30 mm higher than _Place in box_
 
 To control the vacuum, you use the IO command. IO name refers to the digital output, and IO value, to the status, on (1) or off (0).
 

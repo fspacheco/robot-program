@@ -120,9 +120,7 @@ class RobotPost(object):
         """
         self.addline('--================START of %s()================' % progname)
         self.addline('local Default_Option={CP=1, SpeedJ=50, AccJ=20, SpeedL=50, AccL=20}')
-        
-        
-
+    
     def ProgFinish(self, progname):
         """This method is executed to define the end of a program or procedure. One module may have more than one program. No other instructions will be executed before another :meth:`samplepost.RobotPost.ProgStart` is executed.
 
@@ -150,6 +148,7 @@ class RobotPost(object):
         :param show_result: False if the default settings in RoboDK are set to not show the program once it has been saved. Otherwise, a string is provided with the path of the preferred text editor
         :type show_result: bool, str
         """
+
         progname = progname + '.' + self.PROG_EXT
         if ask_user or not DirExists(folder):
             filesave = getSaveFile(folder, progname, 'Save program as...')
@@ -403,7 +402,7 @@ class RobotPost(object):
         :type timeout_ms: float, int
         """
         if type(io_var) != str:  # set default variable name if io_var is a number
-            io_var = 'DI[%s]' % str(io_var)
+            io_var = 'DI(%s)' % str(io_var)
         if type(io_value) != str:  # set default variable value if io_value is a number
             if io_value > 0:
                 io_value = 'ON'

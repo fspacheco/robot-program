@@ -119,6 +119,7 @@ class RobotPost(object):
         :type progname: str
         """
         self.addline('--================START of %s()================' % progname)
+        self.addline('function %s()' % progname)
         self.addline('local Default_Option={CP=1, SpeedJ=50, AccJ=20, SpeedL=50, AccL=20}')
     
     def ProgFinish(self, progname):
@@ -130,7 +131,7 @@ class RobotPost(object):
         :param progname: name of the program
         :type progname: str
         """
-        self.addline('')
+        self.addline('end')
         self.addline('--================END of %s()================' % progname)
 
     def ProgSave(self, folder, progname, ask_user=False, show_result=False):
@@ -148,6 +149,9 @@ class RobotPost(object):
         :param show_result: False if the default settings in RoboDK are set to not show the program once it has been saved. Otherwise, a string is provided with the path of the preferred text editor
         :type show_result: bool, str
         """
+
+        self.addline('--====CALL the main program %s()=======' %progname)
+        self.addline('%s()' %progname)
 
         progname = progname + '.' + self.PROG_EXT
         if ask_user or not DirExists(folder):

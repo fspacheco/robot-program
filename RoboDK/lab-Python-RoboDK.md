@@ -11,11 +11,11 @@ Follow the same [instructions from the getting started lab](https://github.com/f
 
 ## Checking the height to pick a mosaic tile
 
-In this lab, you start picking and placing mosaic tiles with dimensions 24 x 24 x 4 mm. The vacuum cup is expected to touch the top of the titles with Z coordinate -154 mm. Since there is this variation in the attachment of the gripper to the tool shaft, you need to test what is the correct height for your setup:
+In this lab, you start picking and placing mosaic tiles with dimensions 24 x 24 x 4 mm. The vacuum cup is expected to touch the top of the tiles with Z coordinate -154 mm. Since there is this variation in the attachment of the gripper to the tool shaft, you need to test what is the correct height for your setup:
 
 ## Programming with RoboDK
 
-There is a [station in RoboDK](https://github.com/fspacheco/robot-program/blob/main/RoboDK/box/suction-cup/HAMK_mosaic_vacuum_gripper_MG400.rdk) with the vacuum gripper and the holder for the mosaic titles.
+There is a [station in RoboDK](https://github.com/fspacheco/robot-program/blob/main/RoboDK/box/suction-cup/HAMK_mosaic_vacuum_gripper_MG400.rdk) with the vacuum gripper and the holder for the mosaic tiles.
 
 The station has a mosaic tile to pick and a box to place the tile into. The target _Pick 1_ has Z coordinate -154 mm. You should adjust to the value you found in your tests.
 
@@ -62,7 +62,7 @@ Use the same process of copy, paste, and translation.
 
 ### Version 3
 
-For only one mosaic title, it's easier to use the graphical interface. The great power of Python is when you need to repeat a process. Now, let's consider three mosaic titles. Instead of creating each pick and approach position manually we do it in a program.
+For only one mosaic tile, it's easier to use the graphical interface. The great power of Python is when you need to repeat a process. Now, let's consider three mosaic tiles. Instead of creating each pick and approach position manually we do it in a program.
 
 We have _Pick 1_, need to create _Pick 2_ and _Pick 3_ as shown in the following image.
 
@@ -75,10 +75,10 @@ First, think about:
 
 Once you have these answers, the process is like
 ```
-num_titles = 3
+num_tiles = 3
 Locate Pick 1
 Copy Pick 1
-Loop for i in range(2, num_titles+1):
+Loop for i in range(2, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Pick_i
     Move Pick_i in the correct axis with transl
@@ -89,7 +89,7 @@ Try to do by yourself. If you don't find a solution, [here is one](partial-solut
 Then, do a similar process for the approach positions.
 
 ```
-Loop for i in range(1, num_titles+1):
+Loop for i in range(1, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Approach_i
     Move Approach_i in the y-axis and z-axis
@@ -104,7 +104,7 @@ Try to do by yourself. If you don't find a solution, [here is one](partial-solut
 Now, the movements. Again, you use a loop.
 
 ```
-Loop for i in range(1, num_titles+1):
+Loop for i in range(1, num_tiles+1):
     Locate Approach_i
     Locate Pick_i
     MoveJ(Approach_i)
@@ -119,14 +119,18 @@ Loop for i in range(1, num_titles+1):
     Turn off pressure
 ```
 
+The result should be like in the following video.
+
+[![](img/screen-video-3-mosaic-tiles.png)](https://www.youtube.com/watch?v=4671E9QwLTM)
+
 When everything is ok in the simulation, generate the Lua code and run in the real robot.
 
 ## Optional
 
 You can do programs to:
-- Pick the 6 titles
+- Pick the 6 tiles
 - Include the attach and detach events in the simulation
-- Move the titles to other places in the table, with different arrangements
+- Move the tiles to other places in the table, with different arrangements
 
 ![](img/different-arrangements.png)
 

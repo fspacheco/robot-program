@@ -81,10 +81,10 @@ Copy Pick 1
 Loop for i in range(2, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Pick_i
-    Move Pick_i in the correct axis with transl
+    Modify Pick_i in the correct axis with transl
 ```
 
-Try to do by yourself. If you don't find a solution, [here is one](partial-solution-v3.py).
+Try to do by yourself using [this template](template-loop-pick-v3.py). If you don't find a solution, [here is one](partial-solution-v3.py).
 
 Then, do a similar process for the approach positions.
 
@@ -92,7 +92,7 @@ Then, do a similar process for the approach positions.
 Loop for i in range(1, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Approach_i
-    Move Approach_i in the y-axis and z-axis
+    Modify Approach_i in the y-axis and z-axis
 ```
 
 The result should be like in the following image.

@@ -10,11 +10,11 @@ Process:
     Loop for i in range(2,num_tiles+1):
         Paste Pick 1 in the reference frame
         Change the name to Pick_i
-        Move Pick_i in the y-axis
+        Modify Pick_i in the y-axis
     Loop for i in range(1,num_tiles+1):
         Paste Pick 1 in the reference frame
         Change the name to Approach_i
-        Move Approach_i in the y-axis and z-axis
+        Modify Approach_i in the y-axis and z-axis
 
 Partial solution with approaches
 """

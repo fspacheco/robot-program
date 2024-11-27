@@ -137,7 +137,7 @@ You can do programs to:
 
 ## Document your work
 
-Report what you did in your engineering notebook and also comment about any problem or issue you encountered. Also share your achievements!
+Report what you did in your engineering notebook in the repository [basics-prog](https://github.com/ICT-Robotics/basics-prog) and also comment about any problem or issue you encountered. Also share your achievements!
 
 ## Turn off
 

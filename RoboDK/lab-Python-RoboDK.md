@@ -128,7 +128,8 @@ When everything is ok in the simulation, generate the Lua code and run in the re
 ## Optional
 
 You can do programs to:
-- Pick the 6 tiles
+- Pick 6 tiles
+- Show all the tiles in the mosaic holder
 - Include the attach and detach events in the simulation
 - Move the tiles to other places in the table, with different arrangements
 

@@ -55,12 +55,12 @@ According to the manual, pages 8 and 9, the LED status shows the following infor
 
 ## Network setup
 
-Dobot MG400 has a fixed IP address, and to connect to the robot, we need to modify the computer network settings. The following steps consider you are using the Windows machines in the network lab.
+Dobot MG400 has a fixed IP address, and to connect to the robot, we need to modify the computer network settings. The following steps consider you are using the Windows machines in the network lab at HAMK. **Important**: In this lab, the computers have two network cards, one is a Intel for external access and the other is a TP-Link USB for use with the robot. Make sure you change the configuration of the TP-Link USB ethernet card.
 
 Open the network settings in Windows (icon in the taskbar)
 ![](img/using-dobot-mg400/network-icon-windows.svg)
 
-Select the ethernet network that is currently not connected.
+Select the ethernet network that is currently not connected (TP-Link USB ethernet card).
 
 ![](img/using-dobot-mg400/network-setup-window.svg)
 

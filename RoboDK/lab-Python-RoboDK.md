@@ -62,9 +62,9 @@ Use the same process of copy, paste, and translation.
 
 ### Version 3
 
-For only one mosaic tile, it's easier to use the graphical interface. The great power of Python is when you need to repeat a process. Now, let's consider three mosaic tiles. Instead of creating each pick and approach position manually we do it in a program.
+For only one mosaic tile, it's easier to use the graphical interface. The great power of Python is when you need to repeat a process. Now, let's consider three mosaic tiles. Instead of creating each pick and approach positions manually, we do it in a program.
 
-We have _Pick 1_, need to create _Pick 2_ and _Pick 3_ as shown in the following image.
+We already have _Pick 1_. Then, we need to create _Pick 2_ and _Pick 3_ as shown in the following image.
 
 ![](img/3-picks.png)
 
@@ -78,7 +78,7 @@ Once you have these answers, the process is like this _pseudocode_
 num_tiles = 3
 Locate Pick 1
 Copy Pick 1
-Do a Loop for i in range(2, num_tiles+1):
+Do a Loop: for i in range(2, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Pick_i
     Modify Pick_i in the correct axis with transl
@@ -89,7 +89,7 @@ Try to do by yourself using [this template](template-loop-pick-v3.py). If you do
 Then, do a similar process for the approach positions.
 
 ```
-Do a Loop for i in range(1, num_tiles+1):
+Do a Loop: for i in range(1, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Approach_i
     Modify Approach_i in the y-axis and z-axis
@@ -104,7 +104,7 @@ Try to do by yourself. If you don't find a solution, [here is one](partial-solut
 Now, the movements. Again, you use a loop.
 
 ```
-Do a Loop for i in range(1, num_tiles+1):
+Do a Loop: for i in range(1, num_tiles+1):
     Locate Approach_i
     Locate Pick_i
     MoveJ(Approach_i)
@@ -129,7 +129,7 @@ When everything is ok in the simulation, generate the Lua code and run in the re
 
 You can do programs to:
 - Pick 6 tiles
-- Show all the tiles in the mosaic holder
+- Add all the tiles in the mosaic holder, not only the pick positions
 - Include the attach and detach events in the simulation
 - Move the tiles to other places in the table, with different arrangements
 

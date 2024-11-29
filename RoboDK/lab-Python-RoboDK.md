@@ -11,7 +11,7 @@ Follow the same [instructions from the getting started lab](https://github.com/f
 
 ## Checking the height to pick a mosaic tile
 
-In this lab, you start picking and placing mosaic tiles with dimensions 24 x 24 x 4 mm. The vacuum cup is expected to touch the top of the tiles with Z coordinate -154 mm. Since there is this variation in the attachment of the gripper to the tool shaft, you need to test what is the correct height for your setup:
+In this lab, you start picking and placing mosaic tiles with dimensions 24 x 24 x 4 mm. The vacuum cup is expected to touch the top of the tiles with Z coordinate -154 mm. Since there is some variation in the attachment of the gripper to the tool shaft, you need to test the correct height for your setup.
 
 ## Programming with RoboDK
 
@@ -41,7 +41,7 @@ Why is this solution not considered the correct way to move? Answer in your note
 We need approach positions, but this time we do not create them manually. Instead, we do with a Python program. First, let's create:
 - _Approach 1_, that is 80 mm higher than _Pick 1_
 
-The most important part is the use of `robomath.transl`. It is a function in the [RoboDK Python API]((https://robodk.com/doc/en/PythonAPI/robodk.html#robodk.robomath.transl)) that translates a pose: `robodk.robomath.transl(tx=0, ty=0, tz=0)`. The parameters are the axes to be translated (moved).
+The most important part is the use of `robomath.transl`. It is a function in the [RoboDK Python API](https://robodk.com/doc/en/PythonAPI/robodk.html#robodk.robomath.transl) that translates a pose: `robodk.robomath.transl(tx=0, ty=0, tz=0)`. The parameters are the axes to be translated (moved).
 
 ![](img/python-v1.png)
 
@@ -73,12 +73,12 @@ First, think about:
 - In what direction of the axis (positive or negative)?
 - How much do you need to translate (mm)? You can measure in RoboDK and check in the physical holder.
 
-Once you have these answers, the process is like
+Once you have these answers, the process is like this _pseudocode_
 ```
 num_tiles = 3
 Locate Pick 1
 Copy Pick 1
-Loop for i in range(2, num_tiles+1):
+Do a Loop for i in range(2, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Pick_i
     Modify Pick_i in the correct axis with transl
@@ -89,7 +89,7 @@ Try to do by yourself using [this template](template-loop-pick-v3.py). If you do
 Then, do a similar process for the approach positions.
 
 ```
-Loop for i in range(1, num_tiles+1):
+Do a Loop for i in range(1, num_tiles+1):
     Paste Pick 1 in the reference frame
     Change the name to Approach_i
     Modify Approach_i in the y-axis and z-axis
@@ -104,7 +104,7 @@ Try to do by yourself. If you don't find a solution, [here is one](partial-solut
 Now, the movements. Again, you use a loop.
 
 ```
-Loop for i in range(1, num_tiles+1):
+Do a Loop for i in range(1, num_tiles+1):
     Locate Approach_i
     Locate Pick_i
     MoveJ(Approach_i)

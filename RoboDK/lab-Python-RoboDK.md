@@ -135,6 +135,32 @@ You can do programs to:
 
 ![](img/different-arrangements.png)
 
+# Part 2 - Rotation
+
+Besides translation, you can also apply rotation to a pose. Since this robot has 4 DOFs, the only rotation you can use is for the _z_-axis: `robomath.rotz`. Important: the angle should be in radians. Check the [documentation](https://robodk.com/doc/en/PythonAPI/robodk.html#robodk.robomath.rotz).
+
+In the station, there is an item called Kapla wood block. Use it since it is easier to see the rotation in action.
+
+Define one pick position and one place position manually. Then, create new pick and place positions in your Python program. For instance:
+- translate pick positions in y-axis
+- do similar for approach pick positions
+- translate and rotate place positions in z-axis
+- do similar for approach place positions
+
+Check the example in the following video with 3 wood blocks.
+
+[![](img/simulation-rotation-screenshot-youtube.png)](https://www.youtube.com/watch?v=sZ77uhvIT8Q)
+
+Once you understand the process you can scale for more blocks, as shown in the following video.
+
+[![](img/tower-screenshot-youtube.png)](https://www.youtube.com/watch?v=_LVNP_jNXco)
+
+You can also apply both translation in _x_- or _y_-axis and rotation in the place positions to stack the blocks with different geometries.
+
+![](img/stack-wood-blocks-uptime.png)
+
+Image from https://uptimefab.com/2022/02/07/dobot-mg400/
+
 ## Document your work
 
 Report what you did in your engineering notebook in the repository [basics-prog](https://github.com/ICT-Robotics/basics-prog) and also comment about any problem or issue you encountered. Also share your achievements!

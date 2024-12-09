@@ -110,7 +110,6 @@ def generate_character_name():
     first_names = ['Ana', 'Beatriz', 'Clarissa', 'Diana', 'Elena']
     last_names = ['Rana', 'Gurung', 'Rai', 'Magar', 'Kumara']
     
-    import random
     return f"{random.choice(first_names)} {random.choice(last_names)}"
 ```
 
@@ -137,7 +136,6 @@ def generate_story_setting():
         'underwater research station'
     ]
     
-    import random
     return random.choice(settings)
 ```
 
@@ -158,6 +156,8 @@ You need to store the current (unfinished) status. There is a command for that: 
 
 To go to another branch, use `git checkout main`. Then, you merge the branch `character-names` to main with `git merge character-names`.
 
+The current status of your repository is shown in the graph.
+
 ```mermaid
 gitGraph
     commit id: "Add README with project description"
@@ -177,13 +177,19 @@ gitGraph
 
 Now, let's return to the previous point with `git checkout story-setting`.
 
-Modify `story_generator.py` accordingly and test it with `python story_generator.py`. When it's ok, add the files and commit with id "Add basic setting generator".
+Do you remember we were in the middle of the work? You can verify with `git stash list` and then restore with `git stash pop`.
+
+:exclamation: Modify `story_generator.py` accordingly.
+
+Test it with `python story_generator.py`. When it's ok, add the files and commit with id "Add basic setting generator".
+
+Go to the branch `main`and merge the branch `story-setting` to it.
 
 ## Plot twist
 
 Now, the plot generator. Create a new branch with `git checkout -b plot-generator`
 
-Then, add the function to `story_functions.py`:
+Then, add a function to `story_functions.py`:
 ```python
 def generate_plot_twist():
     """
@@ -198,12 +204,11 @@ def generate_plot_twist():
         'The villain is a misunderstood hero'
     ]
     
-    import random
     return random.choice(plot_twists)
 ```
 
 Change `story_generator.py` accordingly, test it, add the files and commit with id "Create initial plot twist function".
 
-## Merge
+### Merge
 
-Go back to the branch `character-names`with `git checkout character-names`.
+Go back to the branch `main` with `git checkout main` and merge the branch `plot-generator`.

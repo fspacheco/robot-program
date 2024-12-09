@@ -162,13 +162,14 @@ To go to another branch, use `git checkout main`. Then, you merge the branch `ch
 gitGraph
     commit id: "Add README with project description"
     commit id: "Add generator"
-    
+
     branch character-names
     commit id: "Add basic name generator"
     commit id: "Add first and last name separation"
 
     branch story-setting
 
+    checkout main
     merge character-names id: "Merge character name branch"
 ```
 

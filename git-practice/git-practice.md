@@ -5,10 +5,12 @@ The main goal of this activity is to practice Git **commands** through the devel
 The code is a story generator, that should create random outputs like:
 
 > In a abandoned castle, Diana Kumara discovers something unexpected:
-    The world is actually a simulation
+>
+>    The world is actually a simulation.
 
 > In a remote mountain village, Elena Rana discovers something unexpected:
-    The villain is a misunderstood hero
+>
+>    The villain is a misunderstood hero.
 
 
 ## Install git
@@ -44,7 +46,7 @@ def generate_story():
     """Generate a story."""
     
     story = f"""
-    In a *setting*, *character* discovers something unexpected:
+    In *setting*, *character* discovers something unexpected:
     *twist*
     """
     return story
@@ -83,7 +85,7 @@ def generate_story():
     character = generate_character_name()
     
     story = f"""
-    In a *setting*, {character} discovers something unexpected:
+    In *setting*, {character} discovers something unexpected:
     *twist*
     """
     return story
@@ -129,11 +131,11 @@ def generate_story_setting():
         str: A randomly generated story setting
     """
     settings = [
-        'mysterious forest',
-        'abandoned castle',
-        'futuristic city',
-        'remote mountain village',
-        'underwater research station'
+        'a mysterious forest',
+        'an abandoned castle',
+        'a futuristic city',
+        'a remote mountain village',
+        'an underwater research station'
     ]
     
     return random.choice(settings)

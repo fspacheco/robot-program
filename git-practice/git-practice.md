@@ -2,7 +2,7 @@
 
 The main goal of this activity is to practice Git **commands** through the development of a Python project. We are going to explore commands for local repositories. The most important commands are in this [Developer Skills list](https://github.blog/developer-skills/github/top-12-git-commands-every-developer-must-know/).
 
-The code is a story generator, that should create random outputs like:
+The code is a story generator, that should create outputs like:
 
 > In a abandoned castle, Diana Kumara discovers something unexpected:
 >
@@ -12,6 +12,13 @@ The code is a story generator, that should create random outputs like:
 >
 >    The villain is a misunderstood hero.
 
+There are three parts to be "assembled": the character name, the setting (place) and the twist (plot). The template is like:
+
+> In *setting*, *character* discovers something unexpected:
+>
+>    *twist*.
+
+Each part is chosen randomly from a list of options. We will do it step by step.
 
 ## Install git
 

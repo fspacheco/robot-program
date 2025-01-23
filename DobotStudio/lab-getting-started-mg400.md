@@ -14,7 +14,7 @@ Read the safety information, pages 1 to 6.
 
 ## The robotic arm Dobot MG400
 
-Check in the user guide the general information about the robot (page 8) and answer the [activity in Learn](https://learn.hamk.fi/mod/hvp/view.php?id=802839).
+Check in the user guide the general information about the robot (page 8) and answer the activity in Learn called "_Drag and drop the part names of the Dobot MG 400 to the correct place_".
 
 ## Connections
 

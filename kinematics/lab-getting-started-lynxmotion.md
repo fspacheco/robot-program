@@ -14,6 +14,7 @@ include a microcontroller that implements a serial communication protocol. The e
 - Voltage sensor
 - Temperature sensor
 - Current sensor
+
 ![](https://wiki.lynxmotion.com/info/wiki/lynxmotion/download/ses-v2/lynxmotion-smart-servo/lss-electrical/WebHome/LSS-Electronics-02.png)
 
 
@@ -47,7 +48,7 @@ For example, `#5D1800<cr>` sends a serial command to all servo's RX pins which a
 
 This is an example code that you can run in the RPi to move the servo.
 
-```
+```python
 #This is an example on writing serial commands
 #to the Lynxmotion SES-V2 smart servos.
 #LSS-ADA board is used on connecting RPi serial

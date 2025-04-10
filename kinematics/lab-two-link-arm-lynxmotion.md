@@ -63,7 +63,7 @@ Check the standard diagram for angles in Lynxmotion servos in the following imag
 
 Does it follow the right-hand rule?
 
-The answer is NO! You can note that Lynxmotion angles increase in the clockwise (CW)direction, and the right-hand rule sets the increase to the counterclockwise (CCW) direction.
+The answer is NO! You can note that Lynxmotion angles increase in the clockwise (CW) direction, but the right-hand rule sets the increase to the counterclockwise (CCW) direction.
 
 So, for servo A, we want to have increasing angles in the counterclockwise direction. Servo B is upside down, so the Lynxmotion direction is ok, because when it is upside down, it will also be in the counterclockwise direction.
 
@@ -115,7 +115,7 @@ bus = serial.Serial(
 servoID_A='3' # IMPORTANT: CHANGE HERE to the number of your servo A
 servoID_B='4' # IMPORTANT: CHANGE HERE to the number of your servo B
 
-# Also IMPORTANT: change gyre direction to counterclockwise (CCW) for servo A
+# Also important: set gyre direction to counterclockwise (CCW) for servo A
 bus.write(f'#{servoID_A}G-1\r'.encode()) # CCW: -1
 bus.write(f'#{servoID_B}G1\r'.encode())  # CW: +1
 

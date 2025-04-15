@@ -46,11 +46,13 @@ vi ros2_humble.sh
 
 ## Accessing the OS in the robot
 
-Use VNC or ssh.
+Use VNC or ssh (in the standard terminal or inside VSCode).
 
 ## Setting up a mounting point
 
-The ROS2 system is inside a Docker container.  If it is not activated, you can activate with `./ros2_humble.sh`. What you write inside the container will disappear when you close it. So, the recommendation is to create a mounting point outside of the container that can be accessed inside it:
+The ROS2 system is inside a Docker container. If you have a prompt command `pi@raspberrypi` you are outside the container. If the prompt command is `root@raspberrypi`, you are inside the container.
+
+If the container is not activated, you can turn on with `./ros2_humble.sh`. What you write inside the container will disappear when you close it. So, the recommendation is to create a mounting point outside of the container that can be accessed inside it:
 
 - Add one line `-v /home/pi:/home/pi` in the file `ros2_humble.sh`, as shown in the image (line 12).
 - Rerun the container
@@ -58,7 +60,6 @@ The ROS2 system is inside a Docker container.  If it is not activated, you can a
 ![](img/creating-mounting-point-container.png)
 
 Inside `/home/pi`, create a directory for your work.
-
 
 ## Using topics
 

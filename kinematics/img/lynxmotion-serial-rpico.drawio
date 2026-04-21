@@ -1,0 +1,86 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0">
+  <diagram name="Page-1" id="ctC_YD43IhsMbheUWCj9">
+    <mxGraphModel dx="701" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-23" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="230" width="545" x="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-20" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.servo;" value="Servo" vertex="1">
+          <mxGeometry height="60" width="60" x="485" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-17" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/computer-hardware-glyphs-vol-1/52/computercable__cable__data__wire__datacable__usb__transfer-128.png;imageBackground=default;" value="" vertex="1">
+          <mxGeometry height="78" width="78" x="335" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-1" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="50" width="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-2" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Your computer&lt;div&gt;with Thonny&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-9" connectable="0" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="group" value="" vertex="1">
+          <mxGeometry height="145" width="85" x="205" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-7" parent="JlTV9KY6p3qoHs3ZNoCp-9" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=bottom;spacingLeft=0;fontColor=#999999;fontSize=12;whiteSpace=wrap;spacingBottom=2;html=1;container=0;" value="RPi SBC Circuit-Board" vertex="1">
+          <mxGeometry height="145" width="70" x="15" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-8" parent="JlTV9KY6p3qoHs3ZNoCp-9" style="sketch=0;dashed=0;connectable=0;html=1;fillColor=#757575;strokeColor=none;shape=mxgraph.gcp2.circuit_board;part=1;container=0;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="25" y="50" as="geometry">
+            <mxPoint x="-25" y="12.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-5" parent="JlTV9KY6p3qoHs3ZNoCp-9" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-11" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="USB" vertex="1">
+          <mxGeometry height="30" width="60" x="125" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-15" edge="1" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="shape=link;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <mxPoint x="290" y="89.5" as="sourcePoint" />
+            <mxPoint x="355" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-16" connectable="0" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="group" value="" vertex="1">
+          <mxGeometry height="100" width="77.5" x="347.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-12" parent="JlTV9KY6p3qoHs3ZNoCp-16" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=bottom;spacingLeft=0;fontColor=#999999;fontSize=12;whiteSpace=wrap;spacingBottom=2;html=1;container=0;" value="Circuit Adaptor" vertex="1">
+          <mxGeometry height="100" width="70" x="7.5" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-13" parent="JlTV9KY6p3qoHs3ZNoCp-16" style="sketch=0;dashed=0;connectable=0;html=1;fillColor=#FF9933;strokeColor=#d79b00;shape=mxgraph.gcp2.circuit_board;part=1;" value="" vertex="1">
+          <mxGeometry height="27.5" width="35" x="25" y="21.25" as="geometry">
+            <mxPoint x="-25" y="12.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-18" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;span style=&quot;color: rgb(204, 102, 0);&quot;&gt;Power Supply&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="315" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-21" edge="1" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="shape=link;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <mxPoint x="425" y="89.5" as="sourcePoint" />
+            <mxPoint x="490" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JlTV9KY6p3qoHs3ZNoCp-22" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Serial communication" vertex="1">
+          <mxGeometry height="30" width="150" x="325" as="geometry" />
+        </mxCell>
+        <mxCell id="_1gjz9JlnHOYTStrMJWb-1" edge="1" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="curved=1;endArrow=classic;html=1;rounded=0;strokeWidth=3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JlTV9KY6p3qoHs3ZNoCp-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="110" />
+              <mxPoint x="155" y="100" />
+              <mxPoint x="75" y="30" />
+              <mxPoint x="185" y="60" />
+            </Array>
+            <mxPoint x="75" y="80" as="sourcePoint" />
+            <mxPoint x="225" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_1gjz9JlnHOYTStrMJWb-4" parent="JlTV9KY6p3qoHs3ZNoCp-23" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="UART" vertex="1">
+          <mxGeometry height="30" width="60" x="287.5" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

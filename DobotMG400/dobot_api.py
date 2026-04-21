@@ -1,3 +1,4 @@
+# Dobot Python API from https://github.com/Dobot-Arm/TCP-IP-4Axis-Python
 import socket
 import threading
 from tkinter import Text, END

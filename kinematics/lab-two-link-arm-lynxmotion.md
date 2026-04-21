@@ -156,7 +156,7 @@ except KeyboardInterrupt:
 1. Check if the results of your forward kinematics program agree with the real robot you built.
 
 2. Incorporate the code for forward kinematics in the program that you run in the Raspberry Pi.
-
+<!--
 3. Connect the boards with buttons (red, green, blue, white) accordingly and test the following code.
 
 ```python
@@ -250,3 +250,4 @@ cb2.cancel()
 cb3.cancel()
 cb4.cancel()
 ```
+-->

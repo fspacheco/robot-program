@@ -75,53 +75,52 @@ This is an example code that you can run in the RPi to move the servo.
 #open the Smart Servo (LSS), LSS Communication Protocol. 
 
 from time import sleep
-import serial
-
-bus = serial.Serial(
-    port = '/dev/ttyS0',  #The "/dev/ttyACM0" is reserved for Bluetooth on RPi3, Zero2W and later
-    baudrate = 115200,
-    parity = serial.PARITY_NONE,
-    stopbits =serial.STOPBITS_ONE,
-    bytesize = serial.EIGHTBITS,
-    timeout = 1
+from machine import UART, Pin
+ 
+# UART0 on Pico:
+# TX = GPIO0
+# RX = GPIO1
+# Change pins if your wiring is different.
+ 
+bus = UART(
+    0,
+    baudrate=115200,
+    bits=8,
+    parity=None,
+    stop=1,
+    tx=Pin(0),
+    rx=Pin(1)
 )
-
-# **********************************
-servoID='3' # IMPORTANT: CHANGE HERE to the number of your servo
-
+ 
+servoID = "23"   # CHANGE to your servo ID
+ 
 # Simple movement
-# Documentation: "Action Commands" in 
-# https://wiki.lynxmotion.com/info/wiki/lynxmotion/view/ses-v2/lynxmotion-smart-servo/lss-communication-protocol
-print('Moving to 0 degrees')
-bus.write(f'#{servoID}D0\r'.encode()) # D indicates degrees
+print("Moving to 0 degrees")
+bus.write(f"#{servoID}D0\r")
 sleep(3)
-print('Moving to 30 degrees')
-bus.write(f'#{servoID}D300\r'.encode()) # D300 means 300 tenths of degrees = 30 degrees
+ 
+print("Moving to 30 degrees")
+bus.write(f"#{servoID}D300\r")
 sleep(5)
-
-# With modifiers
-# Documentation: "Modifiers" in 
-# https://wiki.lynxmotion.com/info/wiki/lynxmotion/view/ses-v2/lynxmotion-smart-servo/lss-communication-protocol
-print('Moving to -90 degrees in 1.5 second')
-bus.write(f'#{servoID}D-900T1500\r'.encode()) # T1500 means 1500ms = 1.5 second
+ 
+# With modifier
+print("Moving to -90 degrees in 1.5 second")
+bus.write(f"#{servoID}D-900T1500\r")
 sleep(5)
-
+ 
 # Using a loop
 counter = 0
-step = 15  # in degrees
-reply = "reply"  
-angleDeg = 0
-
-print("Turning servo to 0.0 degrees and then in steps\n")
-while (step*counter <= 90):
-    print(f'Moving to {step*counter} degrees')
-    bus.write(f'#{servoID}D{step*10*counter}T1500\r'.encode())
-    counter +=1
+step = 15  # degrees
+ 
+print("Turning servo to 0.0 degrees and then in steps")
+while step * counter <= 90:
+    angle = step * counter
+    print(f"Moving to {angle} degrees")
+    bus.write(f"#{servoID}D{angle * 10}T1500\r")
+    counter += 1
     sleep(5)
-
-print("Finished with the servo. Closing serial port.")
-bus.close()
-del bus
+ 
+print("Finished with the servo.")
 ```
 
 ## Wiring for this lab

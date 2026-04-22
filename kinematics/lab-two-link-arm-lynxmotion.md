@@ -82,7 +82,7 @@ This is an example code that you can run in the RPi to move two servos interacti
 #  GPIO15 Rx -- D0 servo Tx
 #  GPIO GND -- GND
 #The Lynxmotion SES-V2 servo serial 115200, parity none, 8 bits, stop bits 1
-
+# Raspberry Pi Pico 2W board
 #Serial port settings
 #  Preferences, Raspberry Pi Configuration
 #    Serial Port ON
@@ -100,15 +100,16 @@ This is an example code that you can run in the RPi to move two servos interacti
 #open the Smart Servo (LSS), LSS Communication Protocol. 
 
 from time import sleep
-import serial
+from machine import UART, Pin
 
-bus = serial.Serial(
-    port = '/dev/ttyS0',  #The "/dev/ttyACM0" is reserved for Bluetooth on RPi3, Zero2W and later
-    baudrate = 115200,
-    parity = serial.PARITY_NONE,
-    stopbits =serial.STOPBITS_ONE,
-    bytesize = serial.EIGHTBITS,
-    timeout = 1
+bus = UART(
+    0,
+    baudrate=115200,
+    bits=8,
+    parity=None,
+    stop=1,
+    tx=Pin(0),
+    rx=Pin(1)
 )
 
 # **********************************
